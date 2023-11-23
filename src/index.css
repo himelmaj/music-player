@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* colors */
+  --spotify-color-1: #1DB954;
+  --spotify-color-2: #2a2a2a;
+  --spotify-color-3: #dbdbdb;
+  --spotify-color-4: #000000;
+  --spotify-color-5: #242424;
+
+  /* fonts */
+  --primay-font: 'Roboto', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+  --tertiary-font: 'Roboto', sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--spotify-color-4);
+  font-family: var(--primay-font);
+  color: var(--spotify-color-3);
+}
+
+@layer components {
+  .artist-card {
+    @apply my-5 mx-2 px-3 py-2 rounded-full hover:cursor-pointer text-center;
+    /* background-color: var(--spotify-color-2); */
+  }
+  /* .artist-card:hover {
+    background-color: var(--spotify-color-5);
+  } */
+
+  @layer components {
+    .input-form {
+      @apply block p-3 rounded-md w-full mb-3 bg-zinc-700;
+    }
+    .input-form {
+      @apply block p-3 rounded-md w-full mb-3 bg-zinc-700;
+    }
+  }
+}
