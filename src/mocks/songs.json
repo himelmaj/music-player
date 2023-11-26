@@ -61,5 +61,26 @@
     "artist": "Denys Kyshchuk",
     "duration": "1:44"
 
+  },
+  {
+    "src": "http://217.23.126.106:8002/radio3.mir",
+    "img": "https://i.pinimg.com/564x/d0/35/a1/d035a1c6711fcde80dd4a0dbad4f6325.jpg",
+    "title": "Radio Mir",
+    "artist": "Radio Mir",
+    "duration": "♾️"
+  },
+  {
+    "src": "https://f131.rndfnk.com/star/crtve/rne5/nav/mp3/128/stream.mp3?cid=01GEP6JFN4YHP4BYW3ERG77WAN&sid=2Yj9JtQbv8LQ9RsRS7P1or7r2Ux&token=mzA1z2EPKm604JnWi44TKgdbClmIsrgxlKaVVZ0JrB8&tvf=frMvl6VXmxdmMTMxLnJuZGZuay5jb20",
+    "img": "https://i.pinimg.com/564x/d0/35/a1/d035a1c6711fcde80dd4a0dbad4f6325.jpg",
+    "title": "RNE Radio 5 Todo Noticias",
+    "artist": "RNE Radio 5 Todo Noticias",
+    "duration": "♾️"
+  },
+  {
+    "src": "https://23563.live.streamtheworld.com/SER_ASO_MEDINAAAC.aac",
+    "img": "https://i.pinimg.com/564x/d0/35/a1/d035a1c6711fcde80dd4a0dbad4f6325.jpg",
+    "title": "Radrio Ser",
+    "artist": "Radio Ser",
+    "duration": "♾️"
   }
 ]

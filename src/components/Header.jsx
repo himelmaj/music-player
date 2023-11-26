@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = Math.floor(seconds % 60);
-  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+  return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
 }
 
 export default function Header({ playing, setPlaying, selectedHowl }) {
@@ -47,23 +47,26 @@ export default function Header({ playing, setPlaying, selectedHowl }) {
 
     return () => clearInterval(progressInterval);
   }, [selectedHowl]);
-
   return (
     <div className="bg-black w-full p-4 flex flex-wrap items-center justify-between">
       <div className="flex items-center">
         <BsSpotify className="text-white" size="30px" />
-        <h1 className="text-white ml-2 font-bold text-2xl">Ñusic 🥲</h1>
+        <h1 className="text-white ml-2 font-bold text-2xl hidden md:inline">Ñusic 🥲</h1>
       </div>
       <div className="flex flex-wrap items-center">
-      <span className="text-white ml-2">{formatTime(currentTime)}</span>
-        <input
-          type="range"
-          max="100"
-          value={progress * 100}
-          onChange={handleProgressChange}
-          className="appearance-none cursor-pointer w-40 md:w-80 h-2 bg-gradient-to-r from-orange-500 via-orange-500 to-gray-500 rounded-full opacity-70 transition-opacity duration-200 hover:opacity-100 mx-4"
-        />
-        <span className="text-white mr-4">{formatTime(duration)}</span>
+        <span className="text-white mx-2">{formatTime(currentTime)}</span>
+        {formatTime(duration) !== "Infinity:NaN" && (
+          <>
+            <input
+              type="range"
+              max="100"
+              value={progress * 100}
+              onChange={handleProgressChange}
+              className="appearance-none cursor-pointer w-50 md:w-80 h-2 bg-gradient-to-r from-orange-500 via-orange-500 to-gray-500 rounded-full opacity-70 transition-opacity duration-200 hover:opacity-100 mx-4 sm:mx-"
+            />
+            <span className="text-white mr-4">{formatTime(duration)}</span>
+          </>
+        )}
         <input
           type="range"
           max="100"

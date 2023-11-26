@@ -54,7 +54,7 @@ export default function Track({
         <img
           src={song.img}
           alt="album cover"
-          className="w-[40px] h-[40px] ml-2"
+          className="md:w-[40px] md:h-[40px] ml-2 hidden md:inline"
         />
       </div>
       <div className="col-span-5 flex flex-col items-start justify-center">
