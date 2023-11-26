@@ -20,7 +20,8 @@ function useFilters() {
         artist.name.toLowerCase().includes(filters.search.toLowerCase()) ||
         artist.songs.some((song) =>
           song.name.toLowerCase().includes(filters.search.toLowerCase())
-        );
+        ) ||
+        artist.genre.toLowerCase().includes(filters.search.toLowerCase());
 
       return genreCondition && searchCondition;
     });
