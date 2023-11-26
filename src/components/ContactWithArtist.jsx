@@ -7,7 +7,7 @@ export function ContactWithArtist() {
         <input type="text" placeholder="Email" className="input-form mb-3" />
         <textarea
           placeholder="How Can I Help?"
-          className="input-form relative h-40 resize-none"
+          className="input-form h-40 resize-none"
           maxLength={150}
         />
         <button className=" bg-blue-200 px-3 w-40 py-2 rounded-md inline-block hover:bg-blue-400 hover:cursor-pointer text-zinc-950 font-bold text-center">
