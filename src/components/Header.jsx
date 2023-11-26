@@ -51,12 +51,14 @@ export default function Header({ playing, setPlaying, selectedHowl }) {
     <div className="bg-black w-full p-4 flex flex-wrap items-center justify-between">
       <div className="flex items-center">
         <BsSpotify className="text-white" size="30px" />
-        <h1 className="text-white ml-2 font-bold text-2xl hidden md:inline">Ñusic 🥲</h1>
+        <h1 className="text-white ml-2 font-bold text-2xl hidden md:inline">
+          Ñusic 🥲
+        </h1>
       </div>
       <div className="flex flex-wrap items-center">
-        <span className="text-white mx-2">{formatTime(currentTime)}</span>
         {formatTime(duration) !== "Infinity:NaN" && (
           <>
+            <span className="text-white mx-2">{formatTime(currentTime)}</span>
             <input
               type="range"
               max="100"
