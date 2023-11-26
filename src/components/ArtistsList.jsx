@@ -11,18 +11,12 @@ function useFilters() {
 
   const filteredArtists = (artists) => {
     return artists.filter((artist) => {
-      const genreCondition =
-        filters.genre === "all" ||
-        artist.genre.toUpperCase() === filters.genre.toUpperCase();
-
-      const searchCondition =
-        filters.search === "" ||
-        artist.name.toLowerCase().includes(filters.search.toLowerCase()) ||
-        artist.songs.some((song) =>
-          song.name.toLowerCase().includes(filters.search.toLowerCase())
-        ) ||
-        artist.genre.toLowerCase().includes(filters.search.toLowerCase());
-
+      const { genre, search } = filters;
+      const genreCondition = genre === "all" || artist.genre.toUpperCase() === genre.toUpperCase();
+      const searchCondition = !search ||
+        artist.name.toLowerCase().includes(search.toLowerCase()) ||
+        artist.songs.some((song) => song.name.toLowerCase().includes(search.toLowerCase())) ||
+        artist.genre.toLowerCase().includes(search.toLowerCase());
       return genreCondition && searchCondition;
     });
   };
