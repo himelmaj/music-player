@@ -24,7 +24,9 @@ export function Filters({ onChange }) {
       <div className="flex items-center justify-center">
         <select
           id={genreId}
-          className="text-sm py-2 px-4 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+          className="text-md py-2 px-4 bg-transparent border-0 border-b-2 border-gray-200
+           appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none
+            focus:ring-0 focus:border-gray-200 peer"
           onChange={handleChangeGenre}
         >
           <option value="all">All</option>
